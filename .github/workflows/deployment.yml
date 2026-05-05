@@ -47,6 +47,7 @@ jobs:
 
       - name: Build Image
         run: |
+          cd /my-app
           docker build -t $ECR_REPO:${{ github.sha }} /my-app/Dockerfile
 
       - name: Tag Image
